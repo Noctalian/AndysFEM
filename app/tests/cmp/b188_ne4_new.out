@@ -1,0 +1,99 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+ TITLE=
+ compare b188_ne4
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS BEAM188
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX   ROTY   ROTZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+            4 elements of type BEAM188
+   Equations: 24   Constrained DOFs: 6   Matrix terms (lower): 192
+   Sparse factor terms: 192
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =           24,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.000
+     Element matrices + assembly . . . .      0.002
+     Equation solution . . . . . . . . .      0.000
+     Reactions + nodal stresses. . . . .      0.001
+     TOTAL SOLVE . . . . . . . . . . . .      0.003
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT U    NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           UX           UY           UZ         USUM
+       1       0.0000       0.0000       0.0000       0.0000
+       2       0.0000      0.24661     -0.12365      0.27588
+       3       0.0000      0.91175     -0.45657       1.0197
+       4       0.0000       1.8559     -0.92899       2.0754
+       5       0.0000       2.9396      -1.4712       3.2872
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               0            5            5            5
+ VALUE         0.0000       2.9396      -1.4712       3.2872
+
+ PRINT ROT  NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE         ROTX         ROTY         ROTZ         RSUM
+       1       0.0000       0.0000       0.0000       0.0000
+       2  0.41475E-04  0.97656E-03  0.19531E-02  0.21841E-02
+       3  0.82950E-04  0.16741E-02  0.33482E-02  0.37443E-02
+       4  0.12443E-03  0.20926E-02  0.41853E-02  0.46809E-02
+       5  0.16590E-03  0.22321E-02  0.44643E-02  0.49940E-02
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               5            5            5            5
+ VALUE    0.16590E-03  0.22321E-02  0.44643E-02  0.49940E-02
+
+ PRINT REACTION SOLUTIONS PER NODE
+
+  ***** POST1 TOTAL REACTION SOLUTION LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING X,Y,Z SOLUTIONS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           FX           FY           FZ           MX           MY           MZ
+       1       0.0000      -50.000       100.00      -1000.0 -0.10000E+06       -50000
+
+ TOTAL VALUES
+ VALUE         0.0000      -50.000       100.00      -1000.0 -0.10000E+06       -50000
+
+ Run finished: 30 commands, 0 warnings, 0 errors, 0.016 s wall clock

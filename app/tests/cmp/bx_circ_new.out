@@ -1,0 +1,59 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS BEAM188
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX   ROTY   ROTZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+            1 elements of type BEAM188
+   Equations: 6   Constrained DOFs: 6   Matrix terms (lower): 21
+   Sparse factor terms: 21
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =            6,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.000
+     Element matrices + assembly . . . .      0.000
+     Equation solution . . . . . . . . .      0.000
+     Reactions + nodal stresses. . . . .      0.000
+     TOTAL SOLVE . . . . . . . . . . . .      0.001
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT U    NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           UX           UY           UZ         USUM
+       1       0.0000       0.0000       0.0000       0.0000
+       2       0.0000       1.5953      -3.1905       3.5671
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               0            2            2            2
+ VALUE         0.0000       1.5953      -3.1905       3.5671
+
+ Run finished: 19 commands, 0 warnings, 0 errors, 0.004 s wall clock

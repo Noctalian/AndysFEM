@@ -1,0 +1,48 @@
+{
+  "engine": "rebuilt_local",
+  "engine_version": "mapdl_fast 0.1.0 (rebuilt MAPDL-compatible solver, in-process)",
+  "equations": 26540,
+  "fields": "job_local.out",
+  "n_pairs": [
+    14,
+    14
+  ],
+  "pairing": "CE node pairs, penalty coupling in the rebuilt solver",
+  "schema": "fem-client/raw@1",
+  "solve_seconds": 0.2157133,
+  "strain_cases": [
+    [
+      0.001,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.001,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.001
+    ]
+  ],
+  "stress_averages": [
+    [
+      0.17720845834720883,
+      -0.1705792092217948,
+      7.565353073793238e-6
+    ],
+    [
+      -0.1705790710797319,
+      0.1771495518241269,
+      7.213284041106705e-7
+    ],
+    [
+      7.537872199543645e-6,
+      7.967226301819367e-7,
+      0.0759037803424624
+    ]
+  ],
+  "stress_route": "Hill's lemma over the constraint forces"
+}

@@ -1,0 +1,98 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+ TITLE=
+ Solid cantilever 200 x 20 x 20 mm, end load
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS SOLID185
+ CREATE A HEXAHEDRAL VOLUME WITH VOLUME = 1
+ ** Meshing done: 1250 elements, 1836 nodes generated **
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+         1250 elements of type SOLID185
+   Equations: 5400   Constrained DOFs: 108   Matrix terms (lower): 173196
+   Sparse factor terms: 1230129
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =         5400,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.003
+     Element matrices + assembly . . . .      0.021
+     Equation solution . . . . . . . . .      0.087
+     Reactions + nodal stresses. . . . .      0.043
+     TOTAL SOLVE . . . . . . . . . . . .      0.155
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT REACTION SOLUTIONS PER NODE
+
+  ***** POST1 TOTAL REACTION SOLUTION LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING X,Y,Z SOLUTIONS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           FX           FY           FZ
+       1       631.93       150.09       218.24
+      52       798.28      -75.936       296.04
+     103       263.60      -136.40       97.971
+     154      -263.60      -136.40      -97.971
+     205      -798.28      -75.936      -296.04
+     256      -631.93       150.09      -218.24
+     307       1071.9       320.42       109.42
+     358       1266.9      -60.795       146.53
+     409       411.33      -168.22       48.450
+     460      -411.33      -168.22      -48.450
+     511      -1266.9      -60.795      -146.53
+     562      -1071.9       320.42      -109.42
+     613       1093.3       343.40       40.650
+     664       1247.9      -11.372       54.148
+     715       400.19      -111.19       17.702
+     766      -400.19      -111.19      -17.702
+     817      -1247.9      -11.372      -54.148
+     868      -1093.3       343.40      -40.650
+     919       1093.3       343.40      -40.650
+     970       1247.9      -11.372      -54.148
+    1021       400.19      -111.19      -17.702
+    1072      -400.19      -111.19       17.702
+    1123      -1247.9      -11.372       54.148
+    1174      -1093.3       343.40       40.650
+    1225       1071.9       320.42      -109.42
+    1276       1266.9      -60.795      -146.53
+    1327       411.33      -168.22      -48.450
+    1378      -411.33      -168.22       48.450
+    1429      -1266.9      -60.795       146.53
+    1480      -1071.9       320.42       109.42
+    1531       631.93       150.09      -218.24
+    1582       798.28      -75.936      -296.04
+    1633       263.60      -136.40      -97.971
+    1684      -263.60      -136.40       97.971
+    1735      -798.28      -75.936       296.04
+    1786      -631.93       150.09       218.24
+
+ TOTAL VALUES
+ VALUE    0.98172E-08       1000.0  0.20856E-09
+  Maximum displacement and von Mises stress:
+ 0.95414  155.07
+
+ Run finished: 31 commands, 0 warnings, 0 errors, 0.158 s wall clock

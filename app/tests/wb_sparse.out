@@ -1,0 +1,62 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+  Workbench-style test
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS SOLID186
+ ELEMENT TYPE 2 IS SURF154
+ NBLOCK: 321 nodes read
+ EBLOCK: 40 elements read
+ EBLOCK: 20 elements read
+ CMBLOCK: component FIXED (21 nodes)
+ CMBLOCK: component TOPSURF (20 elements)
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+           40 elements of type SOLID186
+           20 elements of type SURF154
+   Equations: 900   Constrained DOFs: 63   Matrix terms (lower): 48456
+   Sparse factor terms: 157599
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =          900,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.001
+     Element matrices + assembly . . . .      0.006
+     Equation solution . . . . . . . . .      0.009
+     Reactions + nodal stresses. . . . .      0.005
+     TOTAL SOLVE . . . . . . . . . . . .      0.021
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+  Expected: pressure 1 MPa on 10 mm wide top = 10 N/mm line load; UZ tip = -wL^4/(8EI) = -0.0375 mm (+shear)
+ -0.74344
+
+  *** NOTE ***  Summation of reaction forces at the selected nodes
+
+  *** NET FORCES SUMMED AT ALL SELECTED NODES
+    FX  = -0.21049E-08
+    FY  =  0.33612E-09
+    FZ  =       1000.0
+    MX  =       0.0000
+    MY  =       0.0000
+    MZ  =       0.0000
+
+ Run finished: 29 commands, 0 warnings, 0 errors, 0.031 s wall clock

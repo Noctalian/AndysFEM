@@ -1,0 +1,40 @@
+{
+  "E": 2500.0,
+  "L": 26.578520975546986,
+  "a": 10.0,
+  "groups": {
+    "anchor": 20,
+    "bottom": 3,
+    "corner_tr": 21,
+    "left": 1,
+    "right": 2,
+    "solid": 10,
+    "top": 4
+  },
+  "has_corners": false,
+  "kind": "rotating_squares",
+  "mesh_size": 0.4,
+  "nu": 0.35,
+  "order": 2,
+  "seed": 1,
+  "strain_cases": [
+    [
+      0.001,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.001,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.001
+    ]
+  ],
+  "t": 1.0,
+  "theta_deg": 25.0,
+  "thickness": 1.0
+}

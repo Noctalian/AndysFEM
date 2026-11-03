@@ -1,0 +1,28 @@
+$ python geometry.py
+Info    : Reconstructing periodicity for curve connection 2 - 4
+Info    : Reconstructing periodicity for curve connection 3 - 1
+Info    : Meshing 1D...
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 60%] Meshing curve 3 (Line) as a copy of curve 1
+Info    : [ 80%] Meshing curve 4 (Line)
+Info    : [100%] Meshing curve 2 (Line) as a copy of curve 4
+Info    : Done meshing 1D (Wall 0.000807047s, CPU 0s)
+Info    : Meshing 2D...
+Info    : Meshing surface 1 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.010123s, CPU 0.015625s)
+Info    : Reconstructing periodicity for curve connection 2 - 4
+Info    : Reconstructing periodicity for curve connection 3 - 1
+Info    : 144 nodes 290 elements
+Info    : Meshing order 2 (curvilinear on)...
+Info    : [  0%] Meshing curve 1 order 2
+Info    : [ 30%] Meshing curve 2 order 2
+Info    : [ 50%] Meshing curve 3 order 2
+Info    : [ 70%] Meshing curve 4 order 2
+Info    : [ 90%] Meshing surface 1 order 2
+Info    : Surface mesh: worst distortion = 1 (0 elements in ]0, 0.2]); worst gamma = 0.882325
+Info    : Done meshing order 2 (Wall 0.00120306s, CPU 0s)
+Info    : Reconstructing periodicity for curve connection 2 - 4
+Info    : Reconstructing periodicity for curve connection 3 - 1
+Info    : Writing 'cell.msh'...
+Info    : Done writing 'cell.msh'
+

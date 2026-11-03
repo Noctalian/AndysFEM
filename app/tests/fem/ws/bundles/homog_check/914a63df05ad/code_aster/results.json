@@ -1,0 +1,1 @@
+{"schema": "fem-client/raw@1", "engine": "code_aster", "engine_version": "SYNTHETIC TEST DATA", "strain_cases": [[0.001, 0, 0], [0, 0.001, 0], [0, 0, 0.001]], "stress_averages": [[2.849002849002849, 0.9971509971509971, 0.0], [0.9971509971509971, 2.849002849002849, 0.0], [0.0, 0.0, 0.925925925925926]]}

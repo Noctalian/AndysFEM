@@ -1,0 +1,26 @@
+/TITLE, Plate in tension PLANE182 (plane stress, thickness 5)
+! Hand check: SX = 10 MPa everywhere, UX(end) = 10*400/70000 = 0.0571 mm
+/PREP7
+ET,1,PLANE182,,,3       ! KEYOPT(3)=3: plane stress with thickness
+R,1,5
+MP,EX,1,70000
+MP,PRXY,1,0.33
+RECTNG,0,400,0,100
+ESIZE,10
+AMESH,ALL
+FINISH
+/SOLU
+NSEL,S,LOC,X,0
+D,ALL,UX,0
+NSEL,R,LOC,Y,0
+D,ALL,UY,0
+NSEL,S,LOC,X,400
+SF,ALL,PRES,-10         ! negative pressure = tension
+ALLSEL
+SOLVE
+FINISH
+/POST1
+PRNSOL,S,PRIN
+NSEL,S,LOC,X,0
+PRRSOL
+ALLSEL

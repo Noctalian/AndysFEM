@@ -1,0 +1,64 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+  Workbench-style test
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS SOLID186
+ ELEMENT TYPE 2 IS SURF154
+ NBLOCK: 321 nodes read
+ EBLOCK: 40 elements read
+ EBLOCK: 20 elements read
+ CMBLOCK: component FIXED (21 nodes)
+ CMBLOCK: component TOPSURF (20 elements)
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .PCG
+      TOLERANCE. . . . . . . . . . . . . . . . . .1e-8
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+           40 elements of type SOLID186
+           20 elements of type SURF154
+   Equations: 900   Constrained DOFs: 63   Matrix terms (full): 96012
+   Input PCG Error Tolerance: 1e-8
+   Achieved PCG Error Tolerance: 7.882954066830007e-9   (iterations: 317)
+
+ PCG SOLVER (nodal block-Jacobi preconditioner)
+  Number of equations =          900,    Iterations = 317
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.001
+     Element matrices + assembly . . . .      0.006
+     Equation solution . . . . . . . . .      0.038
+     Reactions + nodal stresses. . . . .      0.004
+     TOTAL SOLVE . . . . . . . . . . . .      0.049
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+  Expected: pressure 1 MPa on 10 mm wide top = 10 N/mm line load; UZ tip = -wL^4/(8EI) = -0.0375 mm (+shear)
+ -0.74344
+
+  *** NOTE ***  Summation of reaction forces at the selected nodes
+
+  *** NET FORCES SUMMED AT ALL SELECTED NODES
+    FX  =  0.15099E-06
+    FY  =  0.77236E-08
+    FZ  =       1000.0
+    MX  =       0.0000
+    MY  =       0.0000
+    MZ  =       0.0000
+
+ Run finished: 29 commands, 0 warnings, 0 errors, 0.051 s wall clock

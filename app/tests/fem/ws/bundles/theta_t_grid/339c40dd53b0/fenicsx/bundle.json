@@ -1,0 +1,64 @@
+{
+  "case_id": "339c40dd53b0",
+  "client_version": "0.1.0",
+  "container_runtime": "podman",
+  "created_unix": 1793706184,
+  "engine": "fenicsx",
+  "engine_image": "ghcr.io/jorgensd/dolfinx_mpc:v0.11.0",
+  "engine_role": "open-source engine B (candidate, not yet decided)",
+  "files_sha256": {
+    "convert_mesh.py": "ea2d3cbba25485fd19ca8934d7b99b7a64932597341f42b023125f739b8f7cbc",
+    "geometry.py": "dd3302dcf493c99b3b98de32b154a2002bd6de52de4a45bdc29622d6725bbd17",
+    "job_fenicsx.py": "7c5f35b628168c3bd7d1148cce4e5e761b0a3b57426e88f2225eaef821342932",
+    "params.json": "9daad4cd930c5191bbefdfff49fd47b8a07156828be9b69b5a2293a69d091e69",
+    "run.sh": "02e37ee23a9ed6e4c2176c16069242745eef77066f8b036d6a3cb12a966aa76c"
+  },
+  "job": {
+    "cell": {
+      "a": 10.0,
+      "kind": "RotatingSquares",
+      "t": 1.0,
+      "theta_deg": 15.0
+    },
+    "load": {
+      "Homogenize": {
+        "strain": 0.001
+      }
+    },
+    "material": {
+      "e": 2500.0,
+      "nu": 0.35,
+      "thickness": 1.0
+    },
+    "mesh": {
+      "order": 2,
+      "seed": 1,
+      "size": 0.4
+    }
+  },
+  "mesh": {
+    "format": "msh",
+    "order": 2,
+    "seed": 1,
+    "size": 0.4
+  },
+  "outputs": [
+    "geometry.json",
+    "mesh_check.json",
+    "results.json",
+    "log.txt"
+  ],
+  "periodic_pairing": "dolfinx_mpc slave elimination (geometrical periodic constraint)",
+  "pins": {
+    "gmsh": "gmsh==4.13.1",
+    "meshlane": "meshlane",
+    "pymapdl": "ansys-mapdl-core"
+  },
+  "schema": "fem-client/bundle@1",
+  "stress_route": "volume average of sigma(E + eps(v)) by assembled integral",
+  "sweep": "theta_t_grid",
+  "unpinned": [
+    "meshlane",
+    "ansys-mapdl-core"
+  ]
+}

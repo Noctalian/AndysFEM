@@ -1,0 +1,20 @@
+{
+ "meshlane": "5.3.5",
+ "format": "msh",
+ "nodes_in": 12982,
+ "nodes_out": 12982,
+ "area_in": 401.0550917284533,
+ "area_out": 401.0550917284533,
+ "groups_out": [
+  "anchor",
+  "bottom",
+  "gmsh:bounding_entities",
+  "left",
+  "right",
+  "solid",
+  "top"
+ ],
+ "nodes_ok": true,
+ "area_ok": true,
+ "groups_missing": []
+}

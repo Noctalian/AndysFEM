@@ -1,0 +1,117 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+ TITLE=
+ Cantilever beam BEAM188 - tip load
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS BEAM188
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ   ROTX   ROTY   ROTZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+           40 elements of type BEAM188
+   Equations: 240   Constrained DOFs: 6   Matrix terms (lower): 2244
+   Sparse factor terms: 2244
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =          240,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.000
+     Element matrices + assembly . . . .      0.001
+     Equation solution . . . . . . . . .      0.000
+     Reactions + nodal stresses. . . . .      0.001
+     TOTAL SOLVE . . . . . . . . . . . .      0.002
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT U    NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           UX           UY           UZ         USUM
+       1       0.0000       0.0000       0.0000       0.0000
+       2       0.0000       0.0000 -0.14247E-02  0.14247E-02
+       3       0.0000       0.0000 -0.55699E-02  0.55699E-02
+       4       0.0000       0.0000 -0.12366E-01  0.12366E-01
+       5       0.0000       0.0000 -0.21742E-01  0.21742E-01
+       6       0.0000       0.0000 -0.33630E-01  0.33630E-01
+       7       0.0000       0.0000 -0.47960E-01  0.47960E-01
+       8       0.0000       0.0000 -0.64661E-01  0.64661E-01
+       9       0.0000       0.0000 -0.83663E-01  0.83663E-01
+      10       0.0000       0.0000     -0.10490      0.10490
+      11       0.0000       0.0000     -0.12830      0.12830
+      12       0.0000       0.0000     -0.15379      0.15379
+      13       0.0000       0.0000     -0.18130      0.18130
+      14       0.0000       0.0000     -0.21076      0.21076
+      15       0.0000       0.0000     -0.24211      0.24211
+      16       0.0000       0.0000     -0.27528      0.27528
+      17       0.0000       0.0000     -0.31018      0.31018
+      18       0.0000       0.0000     -0.34676      0.34676
+      19       0.0000       0.0000     -0.38495      0.38495
+      20       0.0000       0.0000     -0.42467      0.42467
+      21       0.0000       0.0000     -0.46585      0.46585
+      22       0.0000       0.0000     -0.50843      0.50843
+      23       0.0000       0.0000     -0.55234      0.55234
+      24       0.0000       0.0000     -0.59750      0.59750
+      25       0.0000       0.0000     -0.64385      0.64385
+      26       0.0000       0.0000     -0.69131      0.69131
+      27       0.0000       0.0000     -0.73982      0.73982
+      28       0.0000       0.0000     -0.78930      0.78930
+      29       0.0000       0.0000     -0.83970      0.83970
+      30       0.0000       0.0000     -0.89093      0.89093
+      31       0.0000       0.0000     -0.94292      0.94292
+      32       0.0000       0.0000     -0.99562      0.99562
+      33       0.0000       0.0000      -1.0489       1.0489
+      34       0.0000       0.0000      -1.1028       1.1028
+      35       0.0000       0.0000      -1.1572       1.1572
+      36       0.0000       0.0000      -1.2120       1.2120
+      37       0.0000       0.0000      -1.2671       1.2671
+      38       0.0000       0.0000      -1.3225       1.3225
+      39       0.0000       0.0000      -1.3781       1.3781
+      40       0.0000       0.0000      -1.4339       1.4339
+      41       0.0000       0.0000      -1.4897       1.4897
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               0            0           41           41
+ VALUE         0.0000       0.0000      -1.4897       1.4897
+
+ PRINT REACTION SOLUTIONS PER NODE
+
+  ***** POST1 TOTAL REACTION SOLUTION LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING X,Y,Z SOLUTIONS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           FX           FY           FZ           MX           MY           MZ
+       1       0.0000       0.0000       100.00       0.0000 -0.10000E+06       0.0000
+
+ TOTAL VALUES
+ VALUE         0.0000       0.0000       100.00       0.0000 -0.10000E+06       0.0000
+  Tip deflection UZ:
+ -1.4897
+
+ Run finished: 101 commands, 0 warnings, 0 errors, 0.004 s wall clock

@@ -1,0 +1,29 @@
+/TITLE, Cantilever beam BEAM188 - tip load
+! Hand check: UZ tip = P L^3 / (3 E Iy) = -1.488 mm (bending), shear adds ~0.3 %
+/PREP7
+ET,1,BEAM188
+MP,EX,1,210000
+MP,PRXY,1,0.3
+SECTYPE,1,BEAM,RECT
+SECDATA,20,40           ! B (local y) = 20, H (local z) = 40
+L = 1000
+NE = 40
+*DO,i,1,NE+1
+  N,i,(i-1)*L/NE
+*ENDDO
+*DO,i,1,NE
+  E,i,i+1
+*ENDDO
+FINISH
+/SOLU
+D,1,ALL,0
+F,NE+1,FZ,-100
+SOLVE
+FINISH
+/POST1
+PRNSOL,U
+PRRSOL
+*GET,tip,NODE,NE+1,U,Z
+/COM, Tip deflection UZ:
+*VWRITE,tip
+(E14.5)

@@ -1,0 +1,73 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS LINK180
+
+ *** WARNING ***
+ Node 5 is undefined.  Constraint equation 1 cannot be generated.  The CE command is ignored.
+ CONSTRAINT EQUATION NO.          2 HAS        2 TERMS.  CONSTANT= 0.50000
+ CONSTRAINT EQUATION NO.          3 HAS        2 TERMS.  CONSTANT= 0.0000
+
+ *** WARNING ***
+ Entity 7 is undefined.  The CEDELE command is ignored.
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+            3 elements of type LINK180
+
+ *** WARNING ***
+ Constraint equation 3 has specified degree of freedom (dof) constraint at all nodes/dof.  Constraint equation deleted.
+   1 constraint equation(s) enforced (coupling stiffness 2.000e13)
+   Equations: 3   Constrained DOFs: 9   Matrix terms (lower): 5
+   Sparse factor terms: 5
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =            3,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.000
+     Element matrices + assembly . . . .      0.000
+     Equation solution . . . . . . . . .      0.000
+     Reactions + nodal stresses. . . . .      0.000
+     TOTAL SOLVE . . . . . . . . . . . .      0.000
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT U    NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           UX
+       1       0.0000
+       2  0.50000E-01
+       3      0.30000
+       4      0.35000
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               4
+ VALUE        0.35000
+
+ Run finished: 30 commands, 3 warnings, 0 errors, 0.001 s wall clock

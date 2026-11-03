@@ -1,0 +1,10 @@
+P actions make_etude
+P version stable
+P mode interactif
+P ncpus 1
+P memory_limit 2048
+P time_limit 3600
+F comm job.comm D 1
+F mail mesh.mail D 20
+F mess job.mess R 6
+F resu job.resu R 8

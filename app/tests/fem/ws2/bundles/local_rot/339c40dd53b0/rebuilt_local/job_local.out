@@ -1,0 +1,95 @@
+ TITLE=
+ fem-client case (rebuilt MAPDL-compatible solver)
+
+ *****  SOLUTION ROUTINE  *****
+  strain case 1: exx=0.001 eyy=0 gxy=0
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D
+   DEGREES OF FREEDOM. . . . . . UX   UY
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+         6417 elements of type PLANE183
+   56 constraint equation(s) enforced (coupling stiffness 2.500e11)
+   Equations: 26540   Constrained DOFs: 2   Matrix terms (lower): 312022
+   Sparse factor terms: 2632708
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =        26540,    Maximum wavefront = n/a
+	Number of cores used: 1
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.021
+     Element matrices + assembly . . . .      0.041
+     Equation solution . . . . . . . . .      0.067
+     Reactions + nodal stresses. . . . .      0.050
+     TOTAL SOLVE . . . . . . . . . . . .      0.178
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+  strain case 2: exx=0 eyy=0.001 gxy=0
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D
+   DEGREES OF FREEDOM. . . . . . UX   UY
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+         6417 elements of type PLANE183
+   56 constraint equation(s) enforced (coupling stiffness 2.500e11)
+   Equations: 26540   Constrained DOFs: 2   Matrix terms (lower): 312022
+   Sparse factor terms: 2632708
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =        26540,    Maximum wavefront = n/a
+	Number of cores used: 1
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.024
+     Element matrices + assembly . . . .      0.045
+     Equation solution . . . . . . . . .      0.081
+     Reactions + nodal stresses. . . . .      0.070
+     TOTAL SOLVE . . . . . . . . . . . .      0.221
+
+   *** LOAD STEP     2   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+  strain case 3: exx=0 eyy=0 gxy=0.001
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .2-D
+   DEGREES OF FREEDOM. . . . . . UX   UY
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+         6417 elements of type PLANE183
+   56 constraint equation(s) enforced (coupling stiffness 2.500e11)
+   Equations: 26540   Constrained DOFs: 2   Matrix terms (lower): 312022
+   Sparse factor terms: 2632708
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =        26540,    Maximum wavefront = n/a
+	Number of cores used: 1
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.028
+     Element matrices + assembly . . . .      0.058
+     Equation solution . . . . . . . . .      0.063
+     Reactions + nodal stresses. . . . .      0.067
+     TOTAL SOLVE . . . . . . . . . . . .      0.216
+
+   *** LOAD STEP     3   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH

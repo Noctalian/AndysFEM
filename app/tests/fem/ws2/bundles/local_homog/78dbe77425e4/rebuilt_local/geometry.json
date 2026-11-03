@@ -1,0 +1,15 @@
+{
+ "cell_area": 400.0,
+ "solid_area": 399.99999999999994,
+ "porosity": 1.1102230246251565e-16,
+ "anchor": [
+  -10.0,
+  -10.0
+ ],
+ "n_nodes": 533,
+ "gmsh": "4.13.1",
+ "n_left": 1,
+ "n_right": 1,
+ "n_bottom": 1,
+ "n_top": 1
+}

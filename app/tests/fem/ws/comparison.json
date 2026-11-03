@@ -1,0 +1,259 @@
+[
+  {
+    "case_id": "914a63df05ad",
+    "engines": [
+      {
+        "c": [
+          [
+            2849.002849002849,
+            997.1509971509972,
+            0.0
+          ],
+          [
+            997.1509971509972,
+            2849.002849002849,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            925.925925925926
+          ]
+        ],
+        "complete": true,
+        "e1": 2500.0,
+        "e2": 2500.0,
+        "engine": "CodeAster",
+        "engine_version": "SYNTHETIC TEST DATA",
+        "g12": 925.9259259259261,
+        "nu12": 0.35,
+        "nu21": 0.35,
+        "porosity": null,
+        "strain_cases": [
+          [
+            0.001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.001
+          ]
+        ],
+        "stress_averages": [
+          [
+            2.849002849002849,
+            0.9971509971509972,
+            0.0
+          ],
+          [
+            0.9971509971509972,
+            2.849002849002849,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.925925925925926
+          ]
+        ]
+      },
+      {
+        "c": [
+          [
+            2934.4729344729344,
+            997.1509971509972,
+            0.0
+          ],
+          [
+            997.1509971509972,
+            2849.002849002849,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            925.925925925926
+          ]
+        ],
+        "complete": true,
+        "e1": 2585.4700854700855,
+        "e2": 2510.165131524355,
+        "engine": "Fenicsx",
+        "engine_version": "SYNTHETIC TEST DATA",
+        "g12": 925.9259259259261,
+        "nu12": 0.35,
+        "nu21": 0.33980582524271846,
+        "porosity": null,
+        "strain_cases": [
+          [
+            0.001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.001
+          ]
+        ],
+        "stress_averages": [
+          [
+            2.9344729344729346,
+            0.9971509971509972,
+            0.0
+          ],
+          [
+            0.9971509971509972,
+            2.849002849002849,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.925925925925926
+          ]
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "flagged": true,
+        "max_rel_diff": 0.029126213592233004,
+        "name": "C11",
+        "values": {
+          "code_aster": 2849.002849002849,
+          "fenicsx": 2934.4729344729344
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C12",
+        "values": {
+          "code_aster": 997.1509971509972,
+          "fenicsx": 997.1509971509972
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C13",
+        "values": {
+          "code_aster": 0.0,
+          "fenicsx": 0.0
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C21",
+        "values": {
+          "code_aster": 997.1509971509972,
+          "fenicsx": 997.1509971509972
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C22",
+        "values": {
+          "code_aster": 2849.002849002849,
+          "fenicsx": 2849.002849002849
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C23",
+        "values": {
+          "code_aster": 0.0,
+          "fenicsx": 0.0
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C31",
+        "values": {
+          "code_aster": 0.0,
+          "fenicsx": 0.0
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C32",
+        "values": {
+          "code_aster": 0.0,
+          "fenicsx": 0.0
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "C33",
+        "values": {
+          "code_aster": 925.925925925926,
+          "fenicsx": 925.925925925926
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "nu12",
+        "values": {
+          "code_aster": 0.35,
+          "fenicsx": 0.35
+        }
+      },
+      {
+        "flagged": true,
+        "max_rel_diff": 0.029126213592232903,
+        "name": "nu21",
+        "values": {
+          "code_aster": 0.35,
+          "fenicsx": 0.33980582524271846
+        }
+      },
+      {
+        "flagged": true,
+        "max_rel_diff": 0.033057851239669415,
+        "name": "E1",
+        "values": {
+          "code_aster": 2500.0,
+          "fenicsx": 2585.4700854700855
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.004049586776859502,
+        "name": "E2",
+        "values": {
+          "code_aster": 2500.0,
+          "fenicsx": 2510.165131524355
+        }
+      },
+      {
+        "flagged": false,
+        "max_rel_diff": 0.0,
+        "name": "G12",
+        "values": {
+          "code_aster": 925.9259259259261,
+          "fenicsx": 925.9259259259261
+        }
+      }
+    ]
+  }
+]

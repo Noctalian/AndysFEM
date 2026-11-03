@@ -1,0 +1,47 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+ TITLE=
+ Speed test - SOLID186 block 40x20x20
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS SOLID186
+ CREATE A HEXAHEDRAL VOLUME WITH VOLUME = 1
+ ** Meshing done: 16000 elements, 70161 nodes generated **
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+        16000 elements of type SOLID186
+   Equations: 206640   Constrained DOFs: 3843   Matrix terms (lower): 17041662
+   Sparse factor terms: 387213759
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =       206640,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.139
+     Element matrices + assembly . . . .      0.885
+     Equation solution . . . . . . . . .     23.994
+     Reactions + nodal stresses. . . . .      0.721
+     TOTAL SOLVE . . . . . . . . . . . .     25.740
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+ 0.94355E-02
+
+ Run finished: 20 commands, 0 warnings, 0 errors, 25.784 s wall clock

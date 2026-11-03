@@ -1,0 +1,62 @@
+{
+  "case_id": "78dbe77425e4",
+  "client_version": "0.1.0",
+  "container_runtime": "podman",
+  "created_unix": 1793709187,
+  "engine": "rebuilt_local",
+  "engine_image": "in-process (mapdl_fast 0.1.0)",
+  "engine_role": "reverse-engineered solver, runs in-process (no container, no licence)",
+  "files_sha256": {
+    "README_local.txt": "d316f08f6336dcf8c48aaab0ea3137ed32a3cb1307a6de2518bd0b82f90061b7",
+    "geometry.py": "dd3302dcf493c99b3b98de32b154a2002bd6de52de4a45bdc29622d6725bbd17",
+    "params.json": "ed88b3084d1b9449e72d6fc0181f363fb7ec6654ea0d5b4c8f2c2997518f0a12"
+  },
+  "job": {
+    "cell": {
+      "a": 10.0,
+      "kind": "Homogeneous",
+      "t": 1.0,
+      "theta_deg": 15.0
+    },
+    "load": {
+      "Homogenize": {
+        "strain": 0.001
+      }
+    },
+    "material": {
+      "e": 2500.0,
+      "nu": 0.35,
+      "thickness": 1.0
+    },
+    "mesh": {
+      "order": 2,
+      "seed": 1,
+      "size": 2.0
+    }
+  },
+  "mesh": {
+    "format": "msh (read directly)",
+    "order": 2,
+    "seed": 1,
+    "size": 2.0
+  },
+  "outputs": [
+    "geometry.json",
+    "mesh_check.json",
+    "results.json",
+    "log.txt"
+  ],
+  "periodic_pairing": "CE equations from node pairs, penalty coupling in the rebuilt solver",
+  "pins": {
+    "gmsh": "gmsh==4.13.1",
+    "meshlane": "meshlane",
+    "pymapdl": "ansys-mapdl-core"
+  },
+  "schema": "fem-client/bundle@1",
+  "stress_route": "Hill's lemma over the constraint forces",
+  "sweep": "local_homog",
+  "unpinned": [
+    "meshlane",
+    "ansys-mapdl-core"
+  ]
+}

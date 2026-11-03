@@ -1,0 +1,65 @@
+{
+  "case_id": "8ea461546b31",
+  "client_version": "0.1.0",
+  "container_runtime": "podman",
+  "created_unix": 1793706184,
+  "engine": "code_aster",
+  "engine_image": "simvia/code_aster:stable",
+  "engine_role": "open-source engine A (planned)",
+  "files_sha256": {
+    "convert_mesh.py": "ea2d3cbba25485fd19ca8934d7b99b7a64932597341f42b023125f739b8f7cbc",
+    "geometry.py": "dd3302dcf493c99b3b98de32b154a2002bd6de52de4a45bdc29622d6725bbd17",
+    "job.comm": "9799d99c70e1dc9eb9cda72836850fd7a210c6d6fe8bb57d93c6403c899cfd64",
+    "job.export": "3ffc6960de0a8359cb3b0fb26c59054ffff02cd94ff125937fb513790a829207",
+    "params.json": "15f5b0f6acc3c6de2ce4ca1abe2196296e14f9c952ec75e2e4a7edb421f428e4",
+    "run.sh": "65a360a691ab97efb0276dac60ffc29b35fb01bfc2ab6362776b40fa88fed44d"
+  },
+  "job": {
+    "cell": {
+      "a": 10.0,
+      "kind": "RotatingSquares",
+      "t": 1.4,
+      "theta_deg": 15.0
+    },
+    "load": {
+      "Homogenize": {
+        "strain": 0.001
+      }
+    },
+    "material": {
+      "e": 2500.0,
+      "nu": 0.35,
+      "thickness": 1.0
+    },
+    "mesh": {
+      "order": 2,
+      "seed": 1,
+      "size": 0.4
+    }
+  },
+  "mesh": {
+    "format": "med",
+    "order": 2,
+    "seed": 1,
+    "size": 0.4
+  },
+  "outputs": [
+    "geometry.json",
+    "mesh_check.json",
+    "results.json",
+    "log.txt"
+  ],
+  "periodic_pairing": "LIAISON_GROUP with TRAN (Lagrange multipliers)",
+  "pins": {
+    "gmsh": "gmsh==4.13.1",
+    "meshlane": "meshlane",
+    "pymapdl": "ansys-mapdl-core"
+  },
+  "schema": "fem-client/bundle@1",
+  "stress_route": "volume average of SIGM_ELGA (POST_ELEM INTEGRALE)",
+  "sweep": "theta_t_grid",
+  "unpinned": [
+    "meshlane",
+    "ansys-mapdl-core"
+  ]
+}

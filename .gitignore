@@ -1,0 +1,43 @@
+*.img
+
+# Rust build output (app crate)
+target/
+
+# ANSYS run outputs (binary results, databases, logs)
+*.rst
+*.full
+*.esav
+*.emat
+*.rth
+*.db
+*.mntr
+*.page
+*.ldhi
+*.stat
+*.err
+*.tmp
+
+# Craft Anything tool state and session data
+/build-activity.log
+/usage.json
+/feed.json
+/craft.json
+/checks/
+/investigation.cany/
+/capture/
+/pinned/
+/inbox/
+/reference/
+/.remember/
+
+# Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Editors and OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store

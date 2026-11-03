@@ -1,0 +1,106 @@
+ MAPDL-compatible fast solver 0.1.0
+ Parallel threads: 8
+
+ TITLE=
+ Plane truss LINK180
+
+ ***** MAPDL-COMPATIBLE FAST SOLVER: PREPROCESSOR (PREP7) *****
+ ELEMENT TYPE 1 IS LINK180
+ FINISH
+
+ *****  SOLUTION ROUTINE  *****
+
+ *****  SOLVE    COMMAND  *****
+
+                       S O L U T I O N   O P T I O N S
+
+   PROBLEM DIMENSIONALITY. . . . . . . . . . . . .3-D
+   DEGREES OF FREEDOM. . . . . . UX   UY   UZ
+   ANALYSIS TYPE . . . . . . . . . . . . . . . . .STATIC (STEADY-STATE)
+   EQUATION SOLVER OPTION. . . . . . . . . . . . .SPARSE
+   GLOBALLY ASSEMBLED MATRIX . . . . . . . . . . .SYMMETRIC
+
+           11 elements of type LINK180
+   Equations: 11   Constrained DOFs: 10   Matrix terms (lower): 48
+   Sparse factor terms: 60
+
+ SPARSE MATRIX DIRECT SOLVER.
+  Number of equations =           11,    Maximum wavefront = n/a
+	Number of cores used (Shared Memory Parallel): 8
+
+   Time (seconds, wall clock)
+     Setup (DOF numbering, sparsity) . .      0.000
+     Element matrices + assembly . . . .      0.000
+     Equation solution . . . . . . . . .      0.000
+     Reactions + nodal stresses. . . . .      0.000
+     TOTAL SOLVE . . . . . . . . . . . .      0.000
+
+   *** LOAD STEP     1   SUBSTEP     1  COMPLETED.    CUM ITER =      1
+   *** TIME =   1.00000         TIME INC =   1.00000      NEW TRIANG MATRIX
+ FINISH
+
+ *****  GENERAL POSTPROCESSOR (POST1)  *****
+
+ PRINT U    NODAL SOLUTION PER NODE
+
+  ***** POST1 NODAL DEGREE OF FREEDOM LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING DEGREE OF FREEDOM RESULTS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           UX           UY           UZ         USUM
+       1       0.0000       0.0000       0.0000       0.0000
+       2      0.31250      -2.6791       0.0000       2.6973
+       3      0.93750      -2.6791       0.0000       2.8384
+       4       1.2500       0.0000       0.0000       1.2500
+       5       1.2500      -1.4372       0.0000       1.9047
+       6      0.62500      -2.8744       0.0000       2.9416
+       7 -0.12635E-14      -1.4372       0.0000       1.4372
+
+ MAXIMUM ABSOLUTE VALUES
+ NODE               5            6            0            6
+ VALUE         1.2500      -2.8744       0.0000       2.9416
+
+ PRINT REACTION SOLUTIONS PER NODE
+
+  ***** POST1 TOTAL REACTION SOLUTION LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+  THE FOLLOWING X,Y,Z SOLUTIONS ARE IN THE GLOBAL COORDINATE SYSTEM
+
+    NODE           FX           FY           FZ
+       1  0.17280E-10        10000       0.0000
+       2                                 0.0000
+       3                                 0.0000
+       4                     10000       0.0000
+       5                                 0.0000
+       6                                 0.0000
+       7                                 0.0000
+
+ TOTAL VALUES
+ VALUE    0.17280E-10        20000       0.0000
+
+ PRINT ELEMENT FORCES (LINK / BEAM / SPRING)
+
+  ***** POST1 ELEMENT SOLUTION LISTING *****
+
+  LOAD STEP=     1  SUBSTEP=     1
+   TIME=    1.0000      LOAD CASE=   0
+
+ ELEM        1  LINK180   AXIAL FORCE=       6250.0  AXIAL STRESS=       62.500
+ ELEM        2  LINK180   AXIAL FORCE=        12500  AXIAL STRESS=       125.00
+ ELEM        3  LINK180   AXIAL FORCE=       6250.0  AXIAL STRESS=       62.500
+ ELEM        4  LINK180   AXIAL FORCE=       -12500  AXIAL STRESS=      -125.00
+ ELEM        5  LINK180   AXIAL FORCE=       -12500  AXIAL STRESS=      -125.00
+ ELEM        6  LINK180   AXIAL FORCE=       -11792  AXIAL STRESS=      -117.92
+ ELEM        7  LINK180   AXIAL FORCE=        11792  AXIAL STRESS=       117.92
+ ELEM        8  LINK180   AXIAL FORCE= -0.11768E-11  AXIAL STRESS= -0.11768E-13
+ ELEM        9  LINK180   AXIAL FORCE=  0.11180E-10  AXIAL STRESS=  0.11180E-12
+ ELEM       10  LINK180   AXIAL FORCE=        11792  AXIAL STRESS=       117.92
+ ELEM       11  LINK180   AXIAL FORCE=       -11792  AXIAL STRESS=      -117.92
+
+ Run finished: 37 commands, 0 warnings, 0 errors, 0.001 s wall clock
