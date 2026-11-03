@@ -1,5 +1,3 @@
-*.img
-
 # Rust build output (app crate)
 target/
 
@@ -16,6 +14,11 @@ target/
 *.stat
 *.err
 *.tmp
+*.png
+*.jpeg
+*.svg
+*.pdf
+
 
 # Craft Anything tool state and session data
 /build-activity.log
